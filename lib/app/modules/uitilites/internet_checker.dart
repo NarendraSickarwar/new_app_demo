@@ -30,4 +30,5 @@ Future<bool?> checkInternet() async {
   } on SocketException catch (_) {
     return Future.value(false);
   }
+  return null;
 }

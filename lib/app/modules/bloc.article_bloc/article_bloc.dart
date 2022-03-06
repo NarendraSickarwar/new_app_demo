@@ -5,12 +5,12 @@ import 'package:new_app_demo/app/modules/model/newsdatamodel.dart';
 import 'package:new_app_demo/app/modules/service/article_repository.dart';
 
 class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
-  final ArticleRepository repository;
+  final ArticleRepository _repository;
 
 
   ArticleBloc({
     required ArticleRepository repository})
-      : repository = repository,
+      : _repository = repository,
         super(ArticleState()) {
     on<FetchArticlesEvent>(_onEventChanged);
   }
@@ -21,7 +21,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
     if (event is FetchArticlesEvent) {
       emit(ArticleLoadingState());
       try {
-        List<Articles>? articles = await repository.getArticles();
+        List<Articles>? articles = await _repository.getArticles();
         emit(ArticleLoadedState(articles: articles));
       } catch (e) {
         emit(ArticleErrorState(message: e.toString()));
