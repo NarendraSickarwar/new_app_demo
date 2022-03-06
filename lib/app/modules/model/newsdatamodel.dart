@@ -79,13 +79,13 @@ class Articles {
   }
 
   String getTime([DateTime? publishedAt]) {
-    var formatter =  DateFormat('dd MMMM yyyy h:m');
+    var formatter =  DateFormat('yyyy-MM-dd-h:m');
     String formatted = formatter.format(publishedAt!);
     return formatted;
   }
 
   String getDateOnly([DateTime? publishedAt]) {
-    var formatter =  DateFormat('dd MMMM yyyy');
+    var formatter =  DateFormat('yyyy-MM-dd');
     String formatted = formatter.format(publishedAt!);
     return formatted;
   }
