@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:new_app_demo/app/modules/model/newsdatamodel.dart';
 
 
 class ArticleState extends Equatable {
   @override
-  
+
   List<Object?> get props =>  [];
 }
 

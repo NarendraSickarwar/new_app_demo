@@ -36,7 +36,7 @@ final authorDetailsPageTextStyle = TextStyle(
 
 );
 
-final contentStyle = TextStyle(
+final contentTextStyle = TextStyle(
   fontSize: 14,
   fontFamily: Strings.robotoSlabRegular,
   color: AppColor.contentTextColor,
