@@ -101,7 +101,7 @@ class _NewsListPageState extends State<NewsListPage> {
                           child: CachedNetworkImage(
                               imageUrl: articles[index].urlToImage.toString(),
                             width: MediaQuery.of(context).size.width,
-
+                            height: MediaQuery.of(context).size.height / 3.5,
                             fit: BoxFit.contain,
                           ),
                         )
